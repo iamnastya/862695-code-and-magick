@@ -7,9 +7,10 @@ var CLOUD_Y = 10;
 var GAP = 50;
 var FONT_GAP = 50;
 var TEXT_WIDTH = 40;
-var TEXT_HEIGHT = 20;
-var BAR_HEIGHT = 150;
+var TEXT_HEIGHT = 16;
+var BAR_HEIGHT = -150;
 var BAR_WIDTH = 40;
+var HEIGHT = 150;
 
 var renderCloud = function(ctx, x, y, color) {
   ctx.fillStyle = color;
@@ -42,11 +43,26 @@ window.renderStatistics = function (ctx, names, times) {
 
   var maxTime = getMaxElement(times);
 
+
+
+
   ctx.fillStyle = 'blue';
   for (var i = 0; i < names.length; i++) {
-    ctx.fillText(names[i], CLOUD_X + GAP + (TEXT_WIDTH + GAP) * i, CLOUD_Y + CLOUD_HEIGHT - GAP/2);
-    ctx.fillRect(CLOUD_X + GAP + (BAR_WIDTH + GAP) * i, CLOUD_Y + CLOUD_HEIGHT - TEXT_HEIGHT - BAR_HEIGHT - GAP/2, BAR_WIDTH, (BAR_HEIGHT * times[i]) / maxTime);
+    BAR_HEIGHT = (HEIGHT * times[i]) / maxTime;
+    ctx.fillText(names[i], CLOUD_X + GAP + (TEXT_WIDTH + GAP) * i, CLOUD_Y + CLOUD_HEIGHT - GAP/3);
+
+    ctx.fillRect(CLOUD_X + GAP + (BAR_WIDTH + GAP) * i, CLOUD_Y + CLOUD_HEIGHT - TEXT_HEIGHT - GAP/3, BAR_WIDTH, BAR_HEIGHT;
+
+
+    for(var j = 0; j < times.length; j++) {
+
+      ctx.fillText(Math.round(times[j]), CLOUD_X + GAP + (TEXT_WIDTH + GAP) * j, CLOUD_Y - BAR_HEIGHT );
+    };
   };
+
+
+
+
 
 
 
