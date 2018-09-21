@@ -53,7 +53,7 @@ window.renderStatistics = function (ctx, names, times) {
     BAR_HEIGHT = (HEIGHT * times[i]) / maxTime;
     ctx.fillText(names[i], CLOUD_X + GAP + (TEXT_WIDTH + GAP) * i, CLOUD_Y + CLOUD_HEIGHT - GAP/3);
 
-    ctx.fillRect(CLOUD_X + GAP + (BAR_WIDTH + GAP) * i, CLOUD_Y + CLOUD_HEIGHT - TEXT_HEIGHT - GAP/3, BAR_WIDTH, BAR_HEIGHT;
+    ctx.fillRect(CLOUD_X + GAP + (BAR_WIDTH + GAP) * i, CLOUD_Y + CLOUD_HEIGHT - BAR_HEIGHT - GAP/3 - TEXT_HEIGHT, BAR_WIDTH, BAR_HEIGHT);
 
 
     for(var j = 0; j < times.length; j++) {
