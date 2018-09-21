@@ -52,15 +52,12 @@ window.renderStatistics = function (ctx, names, times) {
   for (var i = 0; i < names.length; i++) {
     BAR_HEIGHT = (HEIGHT * times[i]) / maxTime;
     ctx.fillText(names[i], CLOUD_X + GAP + (TEXT_WIDTH + GAP) * i, CLOUD_Y + CLOUD_HEIGHT - GAP/3);
-
     ctx.fillRect(CLOUD_X + GAP + (BAR_WIDTH + GAP) * i, CLOUD_Y + CLOUD_HEIGHT - BAR_HEIGHT - GAP/3 - TEXT_HEIGHT, BAR_WIDTH, BAR_HEIGHT);
+    ctx.fillText(Math.round(times[i]), CLOUD_X + GAP + (TEXT_WIDTH + GAP) * i, CLOUD_Y + TEXT_HEIGHT*2 + GAP);
 
 
-    for(var j = 0; j < times.length; j++) {
-
-      ctx.fillText(Math.round(times[j]), CLOUD_X + GAP + (TEXT_WIDTH + GAP) * j, CLOUD_Y - BAR_HEIGHT );
-    };
   };
+
 
 
 
