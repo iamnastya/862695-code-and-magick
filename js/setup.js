@@ -14,19 +14,19 @@ var eyesColors = ['black', 'red', 'blue', 'yellow', 'green'];
 // eslint.js deleted
 function getName() {
 
-  return names[Math.floor(Math.random()*names.length)] + ' ' + surnames[Math.floor(Math.random()*surnames.length)];
+  return names[Math.floor(Math.random() * names.length)] + ' ' + surnames[Math.floor(Math.random() * surnames.length)];
 
 }
 
 function getCoatColor() {
 
-  return coatColors[Math.floor(Math.random()*coatColors.length)];
+  return coatColors[Math.floor(Math.random() * coatColors.length)];
 
 }
 
 function getEyesColor() {
 
-  return eyesColors[Math.floor(Math.random()*eyesColors.length)];
+  return eyesColors[Math.floor(Math.random() * eyesColors.length)];
 
 }
 
@@ -51,7 +51,7 @@ var wizards = [
     coatColor: getCoatColor(),
     eyesColor: getEyesColor()
   }
-]
+];
 
 var similarWizardTemplate = document.querySelector('#similar-wizard-template')
     .content
@@ -68,14 +68,10 @@ for (var i = 0; i < wizards.length; i++) {
   wizardElement.querySelector('.wizard-coat').style.fill = wizards[i].coatColor;
   wizardElement.querySelector('.wizard-eyes').style.fill = wizards[i].eyesColor;
 
-  fragment.appendChild(wizardElement)
+  fragment.appendChild(wizardElement);
 
 }
 
 similarListElement.appendChild(fragment);
 
 userDialog.querySelector('.setup-similar').classList.remove('hidden');
-
-
-
-
