@@ -11,7 +11,7 @@ var eyesColors = ['black', 'red', 'blue', 'yellow', 'green'];
 // var name = names[Math.floor(Math.random()*names.length)] + ' ' + surnames[Math.floor(Math.random()*surnames.length)];
 // var coatColor = coatColors[Math.floor(Math.random()*coatColors.length)];
 // var eyesColor = eyesColors[Math.floor(Math.random()*eyesColors.length)];
-
+// eslint.js deleted
 function getName() {
 
   return names[Math.floor(Math.random()*names.length)] + ' ' + surnames[Math.floor(Math.random()*surnames.length)];
